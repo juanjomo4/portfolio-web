@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juanjomo Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Header con la navegación -->
+      <div th:replace="fragments/header :: header"></div>
+
+      <section class="about" id="about">
+        <div class="about-flex">
+          <div class="about-content">
+            <h2>¡Encantado de conocerte!</h2>
+            <br />
+            <p>
+              Me llamo <strong>Juanjo Moral</strong> y quiero presentarme para
+              futuras oportunidades en el mundo del desarrollo de software. Soy
+              graduado en Desarrollo de Aplicaciones Multiplataforma con dos
+              años de experiencia y me apasiona la programación, la tecnología,
+              el hardware y todo lo relacionado con el mundo de los smartphones.
+              Siempre estoy buscando aprender cosas nuevas y mejorar en lo que
+              hago.
+            </p>
+          </div>
+          <div class="about-img-box">
+            <img src="/images/imgProfile.jpg" alt="Profile" class="about-img" />
+            <div class="about-img-text">
+              <h3>Juan José Moral</h3>
+              <p>Desarrollador Full Stack<br />Jaén, España</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Background shapes -->
+      <div class="floating-shap shape-1"></div>
+      <div class="floating-shap shape-2"></div>
+      <div class="floating-shap shape-3"></div>
+
+      <!-- Script aboutlizado con la animación de carga -->
+      <script src="/js/script.js"></script>
+    </main>
+    <!-- Footer -->
+    <div th:replace="fragments/footer :: footer"></div>
+  </body>
+</html>

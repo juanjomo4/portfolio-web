@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+  <th:block th:fragment="header">
+    <header class="header">
+      <div class="container header-container">
+        <div class="logo">
+          <a href="/">Juanjo<span>mo</span></a>
+        </div>
+        <nav class="nav">
+          <div class="nav-links">
+            <a class="nav-link" th:href="@{/about}">Sobre mí</a>
+            <a class="nav-link" th:href="@{/experience}">Experiencia laboral</a>
+            <a class="nav-link" th:href="@{/contact}">Contacto</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </th:block>
+</html>

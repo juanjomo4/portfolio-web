@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juanjomo Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Header con la navegación -->
+      <div th:replace="fragments/header :: header"></div>
+
+      <!-- Contenido principal -->
+      <section
+        class="container"
+        id="experiencia-laboral"
+        style="padding: 4rem 0"
+      >
+        <hgroup style="text-align: center; margin-bottom: 3rem">
+          <h2 style="color: #ccc">
+            Un recorrido por mi trayectoria profesional
+          </h2>
+        </hgroup>
+
+        <div class="grid" style="gap: 2.5rem">
+          <article
+            style="
+              background: rgba(255, 255, 255, 0.02);
+              border-radius: 10px;
+              padding: 2rem;
+            "
+          >
+            <h2
+              style="
+                background: linear-gradient(90deg, #ffffff, #a855f7, #ec4899);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+              "
+            >
+              Desarrollador Junior Full Stack
+            </h2>
+            <h3 style="color: #bbb">Infortec Consultores</h3>
+
+            <p style="color: #bbb">Noviembre 2023 - Septiembre 2024</p>
+            <p style="color: #ccc">
+              Desarrollo para clientes relacionados con la banca utilizando
+              gestores de contenido comoOpenText Web.Migración de Liferay a
+              OpenText Web.Tecnologías Utilizadas: Java, JPA, JPS, API REST,
+              Clean Code para mejorar tiempos de cargacontrolados con Dynatrace,
+              JavaScript, HTML, CSS, Bootstrap 5 (El cual fue una migración
+              deBootstrap 4). Control de versiones con Tortoise, Git y
+              Bitbucket.Utilización de herramientas como Eclipse, Visual Studio,
+              Jira, Confluence, Dynatrace, Jenkins.
+            </p>
+          </article>
+
+          <article
+            style="
+              background: rgba(255, 255, 255, 0.02);
+              border-radius: 10px;
+              padding: 2rem;
+            "
+          >
+            <h2
+              style="
+                background: linear-gradient(90deg, #ffffff, #a855f7, #ec4899);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+              "
+            >
+              Desarrollador Junior Full Stack
+            </h2>
+            <h3 style="color: #bbb">NTT DATA Europe & LATAM</h3>
+            <p style="color: #bbb">Febrero 2022 - Marzo 2023</p>
+            <p style="color: #ccc">
+              Desarrollo con clientes de administración pública con tecnologías
+              destacables como Java,JSP, JPA, Hibernate, SpringBoot, Maven,
+              Angular, TypeScript, JavaScript, SQL OracleDeveloper para bases de
+              datos SQL Oracle.Control de versiones con Tortoise, GitLab, Git y
+              Subversion.Utilización de herramientas como Eclipse, SpringBoot
+              IDE, Visual Studio, Jira, Jenkins y Sonar
+            </p>
+          </article>
+
+          <article
+            style="
+              background: rgba(255, 255, 255, 0.02);
+              border-radius: 10px;
+              padding: 2rem;
+            "
+          >
+            <h2
+              style="
+                background: linear-gradient(90deg, #ffffff, #a855f7, #ec4899);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+              "
+            >
+              Prácticas como desarrollador web
+            </h2>
+            <h3 style="color: #bbb">MiPC Martos</h3>
+            <p style="color: #bbb">Marzo 2021 - Junio 2021</p>
+            <p style="color: #ccc">
+              Desarrollo desde cero de una página web con el fin de administrar
+              una empresa de transportetanto desde el lado de camionero como
+              desde el propio empresario, usando roles, tipos deusuarios,
+              creación de rutas, etc. En este proyecto se usó PHP con la
+              tecnología de CodeIgniter4, junto con Bootstrap, MySQL
+              administrado con PHPMyAdmin.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Background shapes -->
+      <div class="floating-shap shape-1"></div>
+      <div class="floating-shap shape-2"></div>
+      <div class="floating-shap shape-3"></div>
+
+      <!-- Script personalizado con la animación de carga -->
+      <script src="/js/script.js"></script>
+    </main>
+    <!-- Footer -->
+    <div th:replace="fragments/footer :: footer"></div>
+  </body>
+</html>
