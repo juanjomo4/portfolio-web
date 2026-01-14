@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juanjomo Portfolio</title>
+    <title>Contacto - Juanjomo Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,37 +18,255 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      /* Estilos específicos para la página Contact */
+      .contact-section {
+        padding: 4rem 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .contact-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .contact-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .contact-header h2 {
+        color: #ccc;
+        font-weight: 400;
+        font-size: 1.25rem;
+      }
+
+      .contact-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .contact-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .contact-card {
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 10px;
+        padding: 2rem;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(25, 120, 215, 0.2);
+      }
+
+      .contact-card-icon {
+        font-size: 2.5rem;
+        color: #1978d7;
+        margin-bottom: 1rem;
+      }
+
+      .contact-card h3 {
+        color: #fff;
+        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+      }
+
+      .contact-card a {
+        color: #48deec;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+      }
+
+      .contact-card a:hover {
+        color: #1978d7;
+      }
+
+      .contact-form-container {
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 10px;
+        padding: 2.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .contact-form-container h3 {
+        color: #fff;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        color: #ccc;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.75rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: #fff;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: border-color 0.3s ease, background 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #1978d7;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 1rem;
+        background: linear-gradient(to right, #1978d7, #48deec);
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(25, 120, 215, 0.3);
+      }
+
+      .submit-btn:active {
+        transform: translateY(0);
+      }
+
+      .submit-btn i {
+        margin-left: 0.5rem;
+      }
+    </style>
   </head>
   <body>
     <main>
       <!-- Header con la navegación -->
       <div th:replace="fragments/header :: header"></div>
 
-      <!-- Sección de contacto -->
-      <section class="contact" id="contact">
-        <div class="contact-flex">
+      <!-- Sección de Contacto -->
+      <section class="contact">
+        <div class="container contact-section">
+          <div class="contact-header">
+            <h1 class="gradient-text">Contacto</h1>
+            <h2>¿Tienes un proyecto en mente? ¡Hablemos!</h2>
+          </div>
+
           <div class="contact-content">
-            <div class="contact-img-box">
-              <img src="/images/phone.jpg" alt="Profile" class="contact-img" />
-              <div class="contact-img-text">
-                <h3>
-                  Teléfono de contacto:
-                  <a href="tel:+34645870893">+34 645 87 08 93</a>
-                </h3>
-              </div>
+            <!-- Información de contacto -->
+            <div class="contact-info">
+              <article class="contact-card fade-in-up">
+                <div class="contact-card-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <a href="mailto:juuanjomoral12@gmail.com">
+                  juuanjomoral12@gmail.com
+                </a>
+              </article>
+
+              <article class="contact-card fade-in-up">
+                <div class="contact-card-icon">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <h3>LinkedIn</h3>
+                <a href="https://linkedin.com/in/juanjomo" target="_blank" rel="noopener">
+                  linkedin.com/in/juanjomo
+                </a>
+              </article>
+
+              <article class="contact-card fade-in-up">
+                <div class="contact-card-icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <h3>GitHub</h3>
+                <a href="https://github.com/juanjomo4" target="_blank" rel="noopener">
+                  github.com/juanjomo4
+                </a>
+              </article>
             </div>
-            <br />
-            <h2>¡Hablemos!</h2>
-            <p>
-              Si tienes alguna pregunta, comentario o simplemente quieres
-              charlar, no dudes en ponerte en contacto conmigo.
-            </p>
-            <p>
-              Puedes enviarme un correo electrónico a
-              <a href="mailto:juuanjomoral12@gmail.com"
-                >juuanjomoral12@gmail.com</a
-              >
-            </p>
+
+            <!-- Formulario de contacto -->
+            <div class="contact-form-container fade-in-up">
+              <h3>Envíame un mensaje</h3>
+              <form>
+                <div class="form-group">
+                  <label for="nombre">Nombre</label>
+                  <input 
+                    type="text" 
+                    id="nombre" 
+                    name="nombre" 
+                    required
+                    placeholder="Tu nombre"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required
+                    placeholder="tu.email@ejemplo.com"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="asunto">Asunto</label>
+                  <input 
+                    type="text" 
+                    id="asunto" 
+                    name="asunto" 
+                    required
+                    placeholder="¿En qué puedo ayudarte?"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="mensaje">Mensaje</label>
+                  <textarea 
+                    id="mensaje" 
+                    name="mensaje" 
+                    required
+                    placeholder="Escribe tu mensaje aquí..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  Enviar Mensaje
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -58,8 +276,6 @@
       <div class="floating-shap shape-2"></div>
       <div class="floating-shap shape-3"></div>
 
-      <!-- Script personalizado con la animación de carga -->
-      <script src="/js/script.js"></script>
     </main>
     <!-- Footer -->
     <div th:replace="fragments/footer :: footer"></div>

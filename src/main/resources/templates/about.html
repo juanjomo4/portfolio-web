@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juanjomo Portfolio</title>
+    <title>Sobre mí - Juanjomo Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,33 +18,213 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      /* Estilos específicos para la página About */
+      .about-section {
+        padding: 4rem 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .about-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .about-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .about-header h2 {
+        color: #ccc;
+        font-weight: 400;
+        font-size: 1.25rem;
+      }
+
+      .about-content {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .about-card {
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 10px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .about-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(25, 120, 215, 0.2);
+      }
+
+      .about-card h3 {
+        color: #fff;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .about-card h3 i {
+        color: #1978d7;
+      }
+
+      .about-card p {
+        color: #ccc;
+        line-height: 1.8;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .skill-category {
+        background: rgba(25, 120, 215, 0.1);
+        padding: 1rem;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .skill-category:hover {
+        transform: translateX(5px);
+      }
+
+      .skill-category.backend {
+        border-left: 3px solid #1978d7;
+      }
+
+      .skill-category.frontend {
+        border-left: 3px solid #48deec;
+      }
+
+      .skill-category.database {
+        border-left: 3px solid #a855f7;
+      }
+
+      .skill-category.tools {
+        border-left: 3px solid #ec4899;
+      }
+
+      .skill-category h4 {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+      }
+
+      .skill-category.backend h4 {
+        color: #1978d7;
+      }
+
+      .skill-category.frontend h4 {
+        color: #48deec;
+      }
+
+      .skill-category.database h4 {
+        color: #a855f7;
+      }
+
+      .skill-category.tools h4 {
+        color: #ec4899;
+      }
+
+      .skill-category p {
+        color: #bbb;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+    </style>
   </head>
   <body>
     <main>
       <!-- Header con la navegación -->
       <div th:replace="fragments/header :: header"></div>
 
-      <section class="about" id="about">
-        <div class="about-flex">
-          <div class="about-content">
-            <h2>¡Encantado de conocerte!</h2>
-            <br />
-            <p>
-              Me llamo <strong>Juanjo Moral</strong> y quiero presentarme para
-              futuras oportunidades en el mundo del desarrollo de software. Soy
-              graduado en Desarrollo de Aplicaciones Multiplataforma con dos
-              años de experiencia y me apasiona la programación, la tecnología,
-              el hardware y todo lo relacionado con el mundo de los smartphones.
-              Siempre estoy buscando aprender cosas nuevas y mejorar en lo que
-              hago.
-            </p>
+      <!-- Sección Sobre mí -->
+      <section class="about">
+        <div class="container about-section">
+          <div class="about-header">
+            <h1 class="gradient-text">Sobre mí</h1>
+            <h2>Desarrollador Full Stack apasionado por crear soluciones innovadoras</h2>
           </div>
-          <div class="about-img-box">
-            <img src="/images/imgProfile.jpg" alt="Profile" class="about-img" />
-            <div class="about-img-text">
-              <h3>Juan José Moral</h3>
-              <p>Desarrollador Full Stack<br />Jaén, España</p>
-            </div>
+
+          <div class="about-content">
+            <!-- ¿Quién soy? -->
+            <article class="about-card fade-in-up">
+              <h3>
+                <i class="fas fa-user"></i>
+                ¿Quién soy?
+              </h3>
+              <p>
+                Soy <strong>Juanjo Moral</strong>, desarrollador Full Stack graduado en C.F.G.S Desarrollo de Aplicaciones Multiplataforma. 
+                Mi pasión por la tecnología y el desarrollo de software me ha llevado a trabajar en proyectos desafiantes tanto en el 
+                sector bancario como en la administración pública.
+                Tengo experiencia autodidacta y formativa en actualización, desmontaje, sustitución de componentes como pantallas, baterías, placas base, 
+                limpieza interna de ordenadores, portátiles, consolas y dispositivos móviles (Huawei, Apple, Samsung, Xiaomi) 
+                además de mantenimiento en consolas como Nintendo y PlayStation (PS4, PS5), además de pequeñas reparaciones de sus mandos.
+              </p>
+            </article>
+
+            <!-- Tecnologías y Habilidades -->
+            <article class="about-card fade-in-up">
+              <h3>
+                <i class="fas fa-code"></i>
+                Tecnologías y Habilidades
+              </h3>
+              <p style="margin-bottom: 1rem;">
+                Tengo experiencia trabajando con un amplio stack tecnológico:
+              </p>
+              <div class="skills-grid">
+                <div class="skill-category backend">
+                  <h4>Backend</h4>
+                  <p>Java, JavaScript, Python, Spring Boot, JPA, Hibernate, PHP, CodeIgniter</p>
+                </div>
+                <div class="skill-category frontend">
+                  <h4>Frontend</h4>
+                  <p>Angular, TypeScript, JavaScript, HTML, CSS, Bootstrap</p>
+                </div>
+                <div class="skill-category database">
+                  <h4>Bases de Datos</h4>
+                  <p>MySQL, Oracle SQL, PHPMyAdmin</p>
+                </div>
+                <div class="skill-category tools">
+                  <h4>Herramientas</h4>
+                  <p>Git, GitLab, Jenkins, Jira, Confluence, Dynatrace</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Formación -->
+            <article class="about-card fade-in-up">
+              <h3>
+                <i class="fas fa-graduation-cap"></i>
+                Formación
+              </h3>
+              <p>
+                <strong>C.F.G.S Desarrollo de Aplicaciones Multiplataforma</strong><br>
+                Esta formación me ha proporcionado una base sólida en desarrollo de software, metodologías ágiles, 
+                bases de datos y arquitectura de aplicaciones.
+              </p>
+            </article>
+
+            <!-- Objetivos y Motivación -->
+            <article class="about-card fade-in-up">
+              <h3>
+                <i class="fas fa-rocket"></i>
+                Objetivos y Motivación
+              </h3>
+              <p>
+                Me apasiona seguir aprendiendo nuevas tecnologías y mejores prácticas de desarrollo. 
+                Busco constantemente mejorar la calidad del código, optimizar el rendimiento y crear experiencias 
+                de usuario excepcionales. Mi objetivo es contribuir en proyectos que generen un impacto positivo 
+                y resolver problemas complejos con soluciones elegantes.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -54,8 +234,6 @@
       <div class="floating-shap shape-2"></div>
       <div class="floating-shap shape-3"></div>
 
-      <!-- Script aboutlizado con la animación de carga -->
-      <script src="/js/script.js"></script>
     </main>
     <!-- Footer -->
     <div th:replace="fragments/footer :: footer"></div>

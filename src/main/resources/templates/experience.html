@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juanjomo Portfolio</title>
+    <title>Experiencia - Juanjomo Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,117 +18,179 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      /* Estilos específicos para la página Experience */
+      .experience-section {
+        padding: 4rem 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .experience-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .experience-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .experience-header h2 {
+        color: #ccc;
+        font-weight: 400;
+        font-size: 1.25rem;
+      }
+
+      .experience-content {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .experience-card {
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 10px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .experience-card::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background: linear-gradient(to bottom, #1978d7, #48deec);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .experience-card:hover {
+        transform: translateX(10px);
+        box-shadow: 0 10px 30px rgba(25, 120, 215, 0.2);
+      }
+
+      .experience-card:hover::before {
+        opacity: 1;
+      }
+
+      .experience-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .experience-card h3 {
+        color: #bbb;
+        font-weight: 600;
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .experience-date {
+        color: #bbb;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .experience-date i {
+        color: #1978d7;
+      }
+
+      .experience-card p {
+        color: #ccc;
+        line-height: 1.8;
+      }
+
+      .experience-card strong {
+        color: #fff;
+      }
+    </style>
   </head>
   <body>
     <main>
       <!-- Header con la navegación -->
       <div th:replace="fragments/header :: header"></div>
 
-      <!-- Contenido principal -->
-      <section
-        class="container"
-        id="experiencia-laboral"
-        style="padding: 4rem 0"
-      >
-        <hgroup style="text-align: center; margin-bottom: 3rem">
-          <h2 style="color: #ccc">
-            Un recorrido por mi trayectoria profesional
-          </h2>
-        </hgroup>
+      <!-- Datos sobre mi experiencia -->
+      <section class="experience">
+        <div class="container experience-section">
+          <div class="experience-header">
+            <h1 class="gradient-text">Experiencia Laboral</h1>
+            <h2>Un recorrido por mi trayectoria profesional</h2>
+          </div>
 
-        <div class="grid" style="gap: 2.5rem">
-          <article
-            style="
-              background: rgba(255, 255, 255, 0.02);
-              border-radius: 10px;
-              padding: 2rem;
-            "
-          >
-            <h2
-              style="
-                background: linear-gradient(90deg, #ffffff, #a855f7, #ec4899);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                color: transparent;
-              "
-            >
-              Desarrollador Junior Full Stack
-            </h2>
-            <h3 style="color: #bbb">Infortec Consultores</h3>
+          <div class="experience-content">
+            <!-- Infortec Consultores -->
+            <article class="experience-card fade-in-up">
+              <h2 class="gradient-text">Desarrollador Junior Full Stack</h2>
+              <h3>Infortec Consultores</h3>
+              <p class="experience-date">
+                <i class="fas fa-calendar-alt"></i>
+                Noviembre 2023 - Septiembre 2024
+              </p>
+              <p>
+                Desarrollo para clientes relacionados con la banca utilizando
+                gestores de contenido como <strong>OpenText Web</strong>. Migración de Liferay a
+                OpenText Web.
+              </p>
+              <p style="margin-top: 1rem;">
+                <strong>Tecnologías:</strong> Java, JPA, JSP, API REST, Clean Code para mejorar tiempos de carga controlados con Dynatrace,
+                JavaScript, HTML, CSS, Bootstrap 5 (migración desde Bootstrap 4).
+              </p>
+              <p style="margin-top: 0.5rem;">
+                <strong>Herramientas:</strong> Control de versiones con Tortoise, Git y
+                Bitbucket. Eclipse, Visual Studio, Jira, Confluence, Dynatrace, Jenkins.
+              </p>
+            </article>
 
-            <p style="color: #bbb">Noviembre 2023 - Septiembre 2024</p>
-            <p style="color: #ccc">
-              Desarrollo para clientes relacionados con la banca utilizando
-              gestores de contenido comoOpenText Web.Migración de Liferay a
-              OpenText Web.Tecnologías Utilizadas: Java, JPA, JPS, API REST,
-              Clean Code para mejorar tiempos de cargacontrolados con Dynatrace,
-              JavaScript, HTML, CSS, Bootstrap 5 (El cual fue una migración
-              deBootstrap 4). Control de versiones con Tortoise, Git y
-              Bitbucket.Utilización de herramientas como Eclipse, Visual Studio,
-              Jira, Confluence, Dynatrace, Jenkins.
-            </p>
-          </article>
+            <!-- NTT DATA Europe & LATAM -->
+            <article class="experience-card fade-in-up">
+              <h2 class="gradient-text">Desarrollador Junior Full Stack</h2>
+              <h3>NTT DATA Europe & LATAM</h3>
+              <p class="experience-date">
+                <i class="fas fa-calendar-alt"></i>
+                Febrero 2022 - Marzo 2023
+              </p>
+              <p>
+                Desarrollo con clientes de administración pública con tecnologías
+                destacables como <strong>Java, JSP, JPA, Hibernate, Spring Boot</strong>, Maven,
+                Angular, TypeScript, JavaScript, SQL Oracle Developer para bases de
+                datos SQL Oracle.
+              </p>
+              <p style="margin-top: 1rem;">
+                <strong>Herramientas:</strong> Control de versiones con Tortoise, GitLab, Git y
+                Subversion. Eclipse, Spring Boot IDE, Visual Studio, Jira, Jenkins y Sonar.
+              </p>
+            </article>
 
-          <article
-            style="
-              background: rgba(255, 255, 255, 0.02);
-              border-radius: 10px;
-              padding: 2rem;
-            "
-          >
-            <h2
-              style="
-                background: linear-gradient(90deg, #ffffff, #a855f7, #ec4899);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                color: transparent;
-              "
-            >
-              Desarrollador Junior Full Stack
-            </h2>
-            <h3 style="color: #bbb">NTT DATA Europe & LATAM</h3>
-            <p style="color: #bbb">Febrero 2022 - Marzo 2023</p>
-            <p style="color: #ccc">
-              Desarrollo con clientes de administración pública con tecnologías
-              destacables como Java,JSP, JPA, Hibernate, SpringBoot, Maven,
-              Angular, TypeScript, JavaScript, SQL OracleDeveloper para bases de
-              datos SQL Oracle.Control de versiones con Tortoise, GitLab, Git y
-              Subversion.Utilización de herramientas como Eclipse, SpringBoot
-              IDE, Visual Studio, Jira, Jenkins y Sonar
-            </p>
-          </article>
-
-          <article
-            style="
-              background: rgba(255, 255, 255, 0.02);
-              border-radius: 10px;
-              padding: 2rem;
-            "
-          >
-            <h2
-              style="
-                background: linear-gradient(90deg, #ffffff, #a855f7, #ec4899);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                color: transparent;
-              "
-            >
-              Prácticas como desarrollador web
-            </h2>
-            <h3 style="color: #bbb">MiPC Martos</h3>
-            <p style="color: #bbb">Marzo 2021 - Junio 2021</p>
-            <p style="color: #ccc">
-              Desarrollo desde cero de una página web con el fin de administrar
-              una empresa de transportetanto desde el lado de camionero como
-              desde el propio empresario, usando roles, tipos deusuarios,
-              creación de rutas, etc. En este proyecto se usó PHP con la
-              tecnología de CodeIgniter4, junto con Bootstrap, MySQL
-              administrado con PHPMyAdmin.
-            </p>
-          </article>
+            <!-- MiPC Martos - Prácticas -->
+            <article class="experience-card fade-in-up">
+              <h2 class="gradient-text">Prácticas como Desarrollador Web</h2>
+              <h3>MiPC Martos</h3>
+              <p class="experience-date">
+                <i class="fas fa-calendar-alt"></i>
+                Marzo 2021 - Junio 2021
+              </p>
+              <p>
+                Desarrollo desde cero de una página web con el fin de administrar
+                una empresa de transporte tanto desde el lado de camionero como
+                desde el propio empresario, usando <strong>roles, tipos de usuarios,
+                creación de rutas</strong>, etc.
+              </p>
+              <p style="margin-top: 1rem;">
+                <strong>Tecnologías:</strong> PHP con CodeIgniter 4, Bootstrap, MySQL
+                administrado con PHPMyAdmin.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -137,8 +199,6 @@
       <div class="floating-shap shape-2"></div>
       <div class="floating-shap shape-3"></div>
 
-      <!-- Script personalizado con la animación de carga -->
-      <script src="/js/script.js"></script>
     </main>
     <!-- Footer -->
     <div th:replace="fragments/footer :: footer"></div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,37 +18,94 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      /* Estilos específicos para la home */
+      .home-greeting {
+        max-width: 700px;
+      }
+
+      .home-greeting h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      .home-greeting h2 {
+        font-size: 1.5rem;
+        color: #ccc;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      .home-greeting p {
+        color: #bbb;
+        font-size: 1.125rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+      }
+
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        background: linear-gradient(to right, #1978d7, #48deec);
+        color: #fff;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(25, 120, 215, 0.3);
+      }
+
+      .cta-button i {
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 768px) {
+        .home-greeting h1 {
+          font-size: 2rem;
+        }
+
+        .home-greeting h2 {
+          font-size: 1.25rem;
+        }
+
+        .home-greeting p {
+          font-size: 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <main>
       <!-- Header con la navegación -->
       <div th:replace="fragments/header :: header"></div>
 
-      <!-- Datos descripcion sobre mi -->
+      <!-- Pequeña info -->
       <section class="descripcionHome" id="home">
-        <div class="descripcionHome-background">
-          <div class="container descripcionHome-container">
-            <div class="descripcionHome-content">
-              <div class="descripcionHome-greeting">
-                <h1 class="descripcionHome-title">
-                  <span class="gradient-text"
-                    >Hola! <br />
-                    Bienvenido a mi portfolio</span
-                  >
-                </h1>
-                <h2 class="descripcionHome-subtitle">
-                  Desarrollador Full Stack
-                </h2>
-                <p class="descripcionHome-description">
-                  Portfolio creado por <strong>Juanjo Moral</strong>,
-                  desarrollador graduado en C.F.G.S Desarrollo de Aplicaciones
-                  Multiplataforma.
-                </p>
+        <div class="container">
+          <div class="descripcionHome-content">
+            <div class="home-greeting fade-in-up">
+              <h1 class="gradient-text">
+                ¡Hola! <br />
+                Bienvenido a mi portfolio
+              </h1>
+              <h2>Desarrollador Full Stack</h2>
+              <p>
+                Portfolio creado por <strong>Juanjo Moral</strong>,
+                desarrollador graduado en C.F.G.S Desarrollo de Aplicaciones
+                Multiplataforma.
+              </p>
 
-                <a class="nav-link" th:href="@{/about}"
-                  >Más sobre mí <i class="fas fa-laptop-code"></i
-                ></a>
-              </div>
+              <a class="cta-button" th:href="@{/about}">
+                Más sobre mí
+                <i class="fas fa-laptop-code"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -58,6 +115,7 @@
       <div class="floating-shap shape-1"></div>
       <div class="floating-shap shape-2"></div>
       <div class="floating-shap shape-3"></div>
+      
     </main>
     <!-- Footer -->
     <div th:replace="fragments/footer :: footer"></div>
