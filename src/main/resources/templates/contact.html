@@ -184,32 +184,37 @@
             <!-- Información de contacto -->
             <div class="contact-info">
               <article class="contact-card fade-in-up">
-                <div class="contact-card-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <h3>Email</h3>
                 <a href="mailto:juuanjomoral12@gmail.com">
-                  juuanjomoral12@gmail.com
+                  <div class="contact-card-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <h3>Email</h3>
                 </a>
               </article>
 
               <article class="contact-card fade-in-up">
-                <div class="contact-card-icon">
-                  <i class="fab fa-linkedin"></i>
-                </div>
-                <h3>LinkedIn</h3>
-                <a href="https://linkedin.com/in/juanjomo" target="_blank" rel="noopener">
-                  linkedin.com/in/juanjomo
+                <a
+                  href="https://linkedin.com/in/juanjomo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <div class="contact-card-icon">
+                    <i class="fab fa-linkedin"></i>
+                  </div>
+                  <h3>LinkedIn</h3>
                 </a>
               </article>
 
               <article class="contact-card fade-in-up">
-                <div class="contact-card-icon">
-                  <i class="fab fa-github"></i>
-                </div>
-                <h3>GitHub</h3>
-                <a href="https://github.com/juanjomo4" target="_blank" rel="noopener">
-                  github.com/juanjomo4
+                <a
+                  href="https://github.com/juanjomo4"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <div class="contact-card-icon">
+                    <i class="fab fa-github"></i>
+                  </div>
+                  <h3>GitHub</h3>
                 </a>
               </article>
             </div>
@@ -220,10 +225,10 @@
               <form>
                 <div class="form-group">
                   <label for="nombre">Nombre</label>
-                  <input 
-                    type="text" 
-                    id="nombre" 
-                    name="nombre" 
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
                     required
                     placeholder="Tu nombre"
                   />
@@ -231,10 +236,10 @@
 
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
                     required
                     placeholder="tu.email@ejemplo.com"
                   />
@@ -242,10 +247,10 @@
 
                 <div class="form-group">
                   <label for="asunto">Asunto</label>
-                  <input 
-                    type="text" 
-                    id="asunto" 
-                    name="asunto" 
+                  <input
+                    type="text"
+                    id="asunto"
+                    name="asunto"
                     required
                     placeholder="¿En qué puedo ayudarte?"
                   />
@@ -253,9 +258,9 @@
 
                 <div class="form-group">
                   <label for="mensaje">Mensaje</label>
-                  <textarea 
-                    id="mensaje" 
-                    name="mensaje" 
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
                     required
                     placeholder="Escribe tu mensaje aquí..."
                   ></textarea>
@@ -270,13 +275,12 @@
           </div>
         </div>
       </section>
-
-      <!-- Background shapes -->
-      <div class="floating-shap shape-1"></div>
-      <div class="floating-shap shape-2"></div>
-      <div class="floating-shap shape-3"></div>
-
     </main>
+    <!-- Se añaden los floating shapes de fondo como elementos decorativos -->
+    <div class="floating-shape" style="top: 25%; left: 5%"></div>
+
+    <div class="floating-shape" style="top: 40%; right: 5%"></div>
+    
     <!-- Footer -->
     <div th:replace="fragments/footer :: footer"></div>
   </body>

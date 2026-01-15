@@ -13,52 +13,65 @@
   --primary-color: #1978d7;
   --secondary-color: #203fc9;
   --accent-color: #48deec;
-  
+
   /* Colores de fondo */
   --dark-color: #0a0a16;
   --darker-color: #050510;
-  
+
   /* Colores de texto */
   --light-color: #f8fafc;
   --text-color: #e2e8f0;
   --text-light: #94a3b8;
-  
+
   /* Colores de estado */
   --success-color: #10b981;
-  
+
   /* Espaciado consistente - Sistema de 8px */
-  --spacing-xs: 0.5rem;    /* 8px */
-  --spacing-sm: 1rem;      /* 16px */
-  --spacing-md: 1.5rem;    /* 24px */
-  --spacing-lg: 2rem;      /* 32px */
-  --spacing-xl: 2.5rem;    /* 40px */
-  --spacing-2xl: 4rem;     /* 64px */
-  
+  --spacing-xs: 0.5rem;
+  /* 8px */
+  --spacing-sm: 1rem;
+  /* 16px */
+  --spacing-md: 1.5rem;
+  /* 24px */
+  --spacing-lg: 2rem;
+  /* 32px */
+  --spacing-xl: 2.5rem;
+  /* 40px */
+  --spacing-2xl: 4rem;
+  /* 64px */
+
   /* Tamaños de fuente - Escala tipográfica */
-  --font-xs: 0.875rem;     /* 14px */
-  --font-sm: 1rem;         /* 16px */
-  --font-md: 1.125rem;     /* 18px */
-  --font-lg: 1.5rem;       /* 24px */
-  --font-xl: 2rem;         /* 32px */
-  --font-2xl: 2.5rem;      /* 40px */
-  --font-3xl: 3rem;        /* 48px */
-  
+  --font-xs: 0.875rem;
+  /* 14px */
+  --font-sm: 1rem;
+  /* 16px */
+  --font-md: 1.125rem;
+  /* 18px */
+  --font-lg: 1.5rem;
+  /* 24px */
+  --font-xl: 2rem;
+  /* 32px */
+  --font-2xl: 2.5rem;
+  /* 40px */
+  --font-3xl: 3rem;
+  /* 48px */
+
   /* Transiciones consistentes */
   --transition-fast: 0.15s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
-  
+
   /* Sombras consistentes */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
-  
+
   /* Border radius */
   --radius-sm: 8px;
   --radius-md: 10px;
   --radius-lg: 15px;
   --radius-full: 50%;
-  
+
   /* Z-index scale - Evita números mágicos */
   --z-base: 1;
   --z-dropdown: 10;
@@ -94,35 +107,35 @@
    TIPOGRAFÍA BASE
    =================================================================== */
 body {
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
-               Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background: var(--darker-color);
   color: var(--text-color);
   line-height: 1.6;
   font-size: var(--font-sm);
-  
+
   /* Mejoras de rendering de fuentes */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  
-  /* Layout sticky footer con Flexbox */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
 }
 
-/* Escala tipográfica coherente */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: var(--spacing-sm);
+h1 {
+  font-size: var(--font-3xl);
 }
 
-h1 { font-size: var(--font-3xl); }
-h2 { font-size: var(--font-2xl); }
-h3 { font-size: var(--font-xl); }
-h4 { font-size: var(--font-lg); }
+h2 {
+  font-size: var(--font-2xl);
+}
+
+h3 {
+  font-size: var(--font-xl);
+}
+
+h4 {
+  font-size: var(--font-lg);
+}
 
 /* Enlaces base - Sin decoración por defecto */
 a {
@@ -140,65 +153,16 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
-
 /* ===================================================================
    LAYOUT PRINCIPAL
    =================================================================== */
-/* 
-   Main flexible: Ocupa todo el espacio disponible
-   empujando el footer al final (Sticky Footer Pattern)
-*/
+
 main {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 0; /* Fix para flex shrinking en algunos navegadores */
 }
-
-
-/* ===================================================================
-   ELEMENTOS DECORATIVOS - Floating Shapes
-   =================================================================== */
-/* 
-   Optimización de rendimiento:
-   - will-change: transform para animaciones suaves
-   - pointer-events: none para evitar interferir con clics
-*/
-.floating-shap {
-  position: absolute;
-  border-radius: var(--radius-full);
-  filter: blur(80px);
-  opacity: 0.15;
-  z-index: var(--z-base);
-  pointer-events: none; /* No interfiere con la interacción del usuario */
-  will-change: transform; /* Optimización para animaciones */
-}
-
-.shape-1 {
-  background: var(--light-color);
-  width: 300px;
-  height: 300px;
-  top: 25%;
-  left: 20%;
-}
-
-.shape-2 {
-  background: var(--success-color);
-  width: 300px;
-  height: 300px;
-  top: 50%;
-  left: 55%;
-}
-
-.shape-3 {
-  background: var(--accent-color);
-  width: 300px;
-  height: 300px;
-  top: 75%;
-  left: 20%;
-}
-
 
 /* ===================================================================
    HEADER - Navegación Principal
@@ -230,7 +194,6 @@ header {
   padding: 0 var(--spacing-lg);
 }
 
-
 /* ===================================================================
    LOGO
    =================================================================== */
@@ -248,7 +211,8 @@ header {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent; /* Fallback para navegadores sin soporte */
+  color: transparent;
+  /* Fallback para navegadores sin soporte */
 }
 
 /* Underline decorativo animado */
@@ -266,7 +230,6 @@ header {
 .logo:hover::after {
   width: 100%;
 }
-
 
 /* ===================================================================
    NAVEGACIÓN
@@ -318,7 +281,7 @@ header {
 
 
 /* ===================================================================
-   SECCIONES - Hero/Home/About/Experience/Contact
+   SECCIONES - /Home/About/Experience/Contact
    =================================================================== */
 /* 
    Padding-top: Compensa la altura del header fixed
@@ -328,7 +291,6 @@ header {
 .about,
 .experience,
 .contact {
-  min-height: calc(100vh - 80px); /* 100vh - altura aproximada del footer */
   padding: 100px var(--spacing-lg) var(--spacing-2xl);
   display: flex;
   align-items: center;
@@ -349,7 +311,6 @@ header {
   width: 100%;
   padding: 0 var(--spacing-lg);
 }
-
 
 /* ===================================================================
    CONTENIDO DE LA SECCIÓN HOME
@@ -378,9 +339,9 @@ header {
   color: var(--text-light);
   margin: var(--spacing-md) 0 var(--spacing-lg);
   line-height: 1.8;
-  max-width: 600px; /* Limita el ancho para mejor legibilidad */
+  max-width: 600px;
+  /* Limita el ancho para mejor legibilidad */
 }
-
 
 /* ===================================================================
    FOOTER
@@ -390,7 +351,8 @@ footer {
   backdrop-filter: blur(10px);
   padding: var(--spacing-md) var(--spacing-lg);
   text-align: center;
-  flex-shrink: 0; /* Previene que el footer se encoja */
+  flex-shrink: 0;
+  /* Previene que el footer se encoja */
   width: 100%;
   position: relative;
   z-index: var(--z-dropdown);
@@ -417,7 +379,6 @@ footer {
   transform: translateY(-2px);
 }
 
-
 /* ===================================================================
    UTILITIES - Clases auxiliares reutilizables
    =================================================================== */
@@ -438,7 +399,6 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-
 /* ===================================================================
    RESPONSIVE DESIGN - Mobile First Approach
    =================================================================== */
@@ -456,7 +416,7 @@ footer {
     --font-3xl: 3.5rem;
     --font-2xl: 2.75rem;
   }
-  
+
   .descripcionHome-content h1 {
     font-size: var(--font-3xl);
   }
@@ -470,22 +430,22 @@ footer {
     --spacing-lg: 1rem;
     --spacing-2xl: 2rem;
   }
-  
+
   /* Navegación responsiva */
   .nav-links {
     gap: var(--spacing-sm);
     flex-wrap: wrap;
   }
-  
+
   .nav-link {
     font-size: var(--font-xs);
   }
-  
+
   /* Logo más pequeño en móvil */
   .logo {
     font-size: 1.4rem;
   }
-  
+
   /* Ajustes de padding para móviles */
   .descripcionHome,
   .about,
@@ -493,14 +453,7 @@ footer {
   .contact {
     padding: 100px var(--spacing-sm) var(--spacing-lg);
   }
-  
-  /* Shapes más pequeñas en móvil para mejor rendimiento */
-  .floating-shap {
-    width: 200px !important;
-    height: 200px !important;
-    filter: blur(60px);
-  }
-  
+
   /* Grid con una sola columna en móvil */
   .grid {
     grid-template-columns: 1fr;
@@ -514,65 +467,15 @@ footer {
     gap: var(--spacing-sm);
     padding: 0 var(--spacing-sm);
   }
-  
+
   .nav {
     width: 100%;
   }
-  
+
   .nav-links {
     justify-content: center;
   }
 }
-
-
-/* ===================================================================
-   ANIMACIONES Y MICROINTERACCIONES
-   =================================================================== */
-/* 
-   Animación de fade-in para elementos que entran en viewport
-   Requiere JavaScript para añadir la clase
-*/
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-/* Animación sutil para las shapes flotantes */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.floating-shap {
-  animation: float 6s ease-in-out infinite;
-}
-
-.shape-1 {
-  animation-delay: 0s;
-}
-
-.shape-2 {
-  animation-delay: 2s;
-}
-
-.shape-3 {
-  animation-delay: 4s;
-}
-
 
 /* ===================================================================
    OPTIMIZACIONES DE RENDIMIENTO
@@ -582,6 +485,7 @@ footer {
    por reducir animaciones (accesibilidad)
 */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -589,31 +493,62 @@ footer {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
-  .floating-shap {
-    animation: none;
+
+}
+
+/* Añadir elemento visual decorativo estilo floating-shape detras de las secciones principales */
+.floating-shape {
+  position: absolute;
+  z-index: -1;
+  filter: blur(60px);
+  opacity: 0.3;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--success-color));
+}
+
+/* Añadir movimiento aleatorio a los floating-shape para dar vida al diseño, son dos floating-shape y van a tener diferentes movimientos */
+@keyframes floatAnimation1 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+@keyframes floatAnimation2 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(20px) translateX(-15px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+.floating-shape:nth-of-type(1) {
+  animation: floatAnimation1 6s ease-in-out infinite;
+}
+.floating-shape:nth-of-type(2) {
+  animation: floatAnimation2 8s ease-in-out infinite;
+}
+
+/* Shapes más grandes en desktops */
+@media (min-width: 1024px) {
+  .floating-shape {
+    width: 400px;
+    height: 400px;
   }
 }
 
-/* 
-   Contain: Aísla elementos para mejorar el rendering
-   Útil para elementos que no afectan al layout exterior
-*/
-.floating-shap {
-  contain: layout style paint;
-}
-
-
-/* ===================================================================
-   DARK MODE SUPPORT (Preparado para futuras implementaciones)
-   =================================================================== */
-/* 
-@media (prefers-color-scheme: light) {
-  :root {
-    --darker-color: #ffffff;
-    --dark-color: #f8fafc;
-    --text-color: #1e293b;
-    --text-light: #475569;
+/* Shapes más pequeñas en móvil para mejor rendimiento */
+@media (max-width: 768px) {
+  .floating-shape {
+    width: 200px !important;
+    height: 200px !important;
+    filter: blur(60px);
   }
 }
-*/
